@@ -216,7 +216,7 @@ const LinearRegression = {
                 map(y[1], 0, 1, maxGridSize, 0)
             ]
         } else {
-            stroke('rgb(171,245,174)');
+            stroke('rgb(171, 245, 174)');
         }
         line( ...this.lineCoordinates );
     },
@@ -270,10 +270,10 @@ function mouseReleased() {
 }
 
 // On mouse click add a new data point
-function mouseClicked() {
+function mouseClicked(event) {
     LinearRegression.enableTraining();
     DataSet.addNewData(mouseX, mouseY, PRESUME_MAX_GRID_SIZE);
-    return false;
+    return event;
 }
 
 /*
@@ -318,11 +318,9 @@ function draw() {
 /*
     Set up on reset button press event listner
 */
-
 window.onload = function () {
     const reset_button = document.getElementById('reset');
     reset_button.addEventListener('click', (event) => {
-        // setTimeout(()=> DataSet.clearAllData(), 20);
         event.stopPropagation();
         DataSet.clearAllData();
     });
