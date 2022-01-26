@@ -1,0 +1,93 @@
+body {
+    padding: 0px; 
+    margin: 0px; 
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header {
+    position: absolute;
+    padding: 0px 15px 0px 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 100ms linear;
+    padding: 0px 5px 5px 5px;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo > .webname {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.125em;
+    font-weight: bold;
+}
+
+#logo > .desc {
+    letter-spacing: 0.5em;
+    font-size: 0.7em;
+}
+
+#logo:hover {
+    background-color: rgb(202, 199, 8);
+}
+
+#logo > span {
+    color: white;
+    padding-left: 5px;
+}
+
+#reset {
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 7px 10px;
+    height: fit-content;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 100ms linear;
+}
+
+#reset:hover {
+    background-color: white;
+    color: black;
+    top: -1px;
+}
+
+#reset:active {
+    top: 2px;
+    background-color: rgb(245, 242, 66);
+}
+
+#sidebar {
+    transform-origin: bottom right;
+    transform: rotate(-90deg);
+    right: 5px;
+    font-size: 0.7em;
+    color: white;
+    position: absolute;
+    width: 100vh;
+    box-sizing: border-box;
+    padding-left: 8vh;
+    text-align: center;
+}
+
+#sidebar > a {
+    text-decoration: none;
+    color: white;
+}
